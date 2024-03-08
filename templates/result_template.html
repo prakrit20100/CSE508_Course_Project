@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <!-- Add an icon before the title -->
+        <i class="fas fa-palette"></i>
+        <h2>ART HISTORY QUIZ</h2>
+    </div>
+    <div class="container">
+        <h1>Quiz Solutions</h1>
+        <form action="/" method="GET">
+
+            {% for question in questions %}
+            <div class="question" >
+                <p>{{ question['question'] }}</p>
+                <h2> {{ question['correctOption'] }} </h2>
+            </div>
+            {% endfor %}
+            <button type="submit" id="submit_button">Submit</button>
+        </form>
+    </div>
+    <h1>{{ score }}</h1>
+    <div class="footer">
+        <h3>IR Project Group 42: </h3>
+        <h4></h4>
+        <h5>Shubham Das, Akshansh Jaiswal, Prakrit Garg, Shobhit Kumar, Digvijay Singh</h5>
+        <!-- Add an image after the text -->
+        <!-- <img src="group_logo.png" alt="Group Logo"> -->
+    </div>
+</body>
+</html>
