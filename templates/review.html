@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='review.css') }} "> <!-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form id="nextForm" method="POST">
+        <div class="header">
+            <h2>ART HISTORY QUIZ</h2>
+        </div>
+
+        <div class="container">
+            <div class="image-bg">
+                <div class="image">
+                    <img src="{{ img }}" alt="Description of Image">
+                </div>
+            </div>
+            <div class="question">
+                <h2>{{ val }}</h2>
+                <h2>Score : {{ score }} </h2>
+                <h1>{{ review }}</h1>
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" rows="4" cols="50" placeholder="Optional review"></textarea>
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="none">None</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button-x" type="submit" form="nextForm" formaction="/quiz">Next</button>
+            <button class="button-x" type="submit" form="nextForm" formaction="/results">End Quiz</button>
+        </div>
+
+        <div class="footer">
+            <p>Made By: Group 63</p>
+        </div>
+    </form>
+</body>
+
+</html>

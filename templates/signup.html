@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <div class="header">
+        <h2>ART HISTORY QUIZ</h2>
+    </div>
+    <div class="container">
+        <div class="text">
+            SIGN UP
+        </div>
+        <div class="data">
+            <form action="/lobby" method="GET">
+                <div class="data">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="data">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="data">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit">Create account and Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Made By: Group 63</p>
+    </div>
+</body>
+
+</html>
