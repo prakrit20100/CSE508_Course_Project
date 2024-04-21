@@ -85,12 +85,18 @@ def lobbyPage():
             return render_template('lobby.html',user_name = username)
     # return render_template('lobby.html', user_name = user_info['name'])
 
-@app.route('/practice')
+@app.route('/practice', methods=['GET', 'POST'])
 def practice():
-    global logIn
-    global userLogin
-    logIn = 1
-    userLogin = 1
+    return render_template('practice.html')
+
+@app.route('/practicequiz', methods=['GET', 'POST'])
+def practicequiz():
+    title = request.form.get('title')
+    review = request.form.get('review')
+    photo = request.files['image']
+    filename = photo.filename
+    photo.save('uploads/' + filename)
+    print(title, review, photo)
     return render_template('practice.html')
 
 

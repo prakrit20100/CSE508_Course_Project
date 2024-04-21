@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #ECCA9C;
+    text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.marcellus-sc-regular {
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.header h2 {
+    font-family: "Marcellus SC", serif;
+    font-size: 42px;
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+	flex:1;
+}
+
+.question {
+    max-width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    background-color: #f98a23;
+    box-shadow: #422800 10px 10px 0 0;
+}
+
+.question textarea,
+.question select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.question label {
+    font-size: 18px;
+    margin-top: 20px;
+	background-color: #f98a23;
+	color: white;
+	flex:1;
+}
+
+h1 {
+	background-color: #f98a23;
+	align-items: center;
+}
+
+.form {
+    max-width: 500px;
+    position: relative;
+    font-size: 15px;
+}
+
+input[type="file"] {
+	margin-bottom: 10px;
+}
+button[type="submit"] {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+button[type="submit"]:hover {
+	background-color: #0056b3;
+}
+
+@keyframes blink {
+	0% {
+		background-color: #f6d89f;
+	}
+	10% {
+		background-color: #f6d89f;
+	}
+	11% {
+		background-color: #f8e5b2;
+	}
+	29% {
+		background-color: #f8e5b2;
+	}
+	30% {
+		background-color: #f6d89f;
+	}
+	50% {
+		background-color: #f8e5b2;
+	}
+	45% {
+		background-color: #f6d89f;
+	}
+	50% {
+		background-color: #f8e5b2;
+	}
+	100% {
+		background-color: #f6d89f;
+	}
+}
+.image-bg {
+    max-width: 50%;
+	padding-bottom: 40px;
+}
+
+.image {
+    background-color: #f98a23;
+    padding: 20px;
+    box-shadow: #422800 10px 10px 0 0;
+	
+}
+
+img {
+    width: 100%;
+	background-color: #f98a23;
+    height: auto;
+}
+
+.buttons {
+	display: flex; 
+	justify-content: flex-end; 
+	align-items: center;
+	/* padding-bottom: 10%; */
+	padding-top: 100px;
+	padding-right: 50px; 
+	padding-bottom: 100px;
+  }
+
+.button-x {
+	background-color: #AFD198;
+	border: 4px solid #422800;
+	border-radius: 50px;
+	width: 200px; 
+	box-shadow: #422800 10px 10px 0 0;
+	color: #422800;
+	cursor: pointer;
+	display: inline-block; 
+	font-weight: 600;
+	font-size: 24px;
+	padding: 0 18px;
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin-right: 20px; 
+}
+
+.button-x:hover {
+  background-color: #fff;
+}
+
+.button-x:active {
+	box-shadow: #422800 2px 2px 0 0;
+	transform: translate(2px, 2px);
+}
+
+
+@media (min-width: 768px) {
+  .button-x {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+.footer {
+  color: white;
+  text-align: center; 
+  padding: 20px; 
+  position: fixed; 
+  left: 0; 
+  bottom: 0; 
+  width: 100%; 
+}
+
+.footer p {
+    font-family: "Marcellus SC", serif;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar {
+	width: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+  }
+  
+  /* Handle on drag */
+  ::-webkit-scrollbar-thumb:active {
+	background: #333;
+  }
+  

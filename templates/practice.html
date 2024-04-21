@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='review.css') }} "> <!-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form id="nextForm" method="POST" enctype="multipart/form-data">
+        <div class="header">
+            <h2>ART HISTORY QUIZ</h2>
+        </div>
+
+        <div class="container">
+            <!-- <div class="image-bg">
+                <div class="image">
+                    <img src="{{ img }}" alt="Description of Image">
+                </div>
+            </div> -->
+            <div class="question">
+                <label for="title">Input Title:</label>
+                <textarea id="title" name="title" rows="2" cols="50" placeholder="title" required></textarea>
+                <label for="review">Input Review:</label>
+                <textarea id="review" name="review" rows="4" cols="50" placeholder="title" required></textarea>
+                <label for="image">Input Image:</label>
+                <input type="file" name="image" accept="image/*" required>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button-x" type="submit" form="nextForm" formaction="/practicequiz">Submit</button>
+        </div>
+
+        <div class="footer">
+            <p>Made By: Group 63</p>
+        </div>
+    </form>
+</body>
+
+</html>
