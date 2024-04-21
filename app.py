@@ -89,15 +89,28 @@ def lobbyPage():
 def practice():
     return render_template('practice.html')
 
-@app.route('/practicequiz', methods=['GET', 'POST'])
-def practicequiz():
+@app.route('/practicequestion', methods=['GET', 'POST'])
+def practicequestion():
+    global questionNumber
+    global questions
+    questionNumber=0
     title = request.form.get('title')
     review = request.form.get('review')
     photo = request.files['image']
     filename = photo.filename
     photo.save('uploads/' + filename)
+    #Multimodality Integration
+
+
+
+    questions =[{'question': 'What is the name of the drawing by Hans Gustav Burkhardt?', 
+                 'options': ['Plate 13: Designs with Cross, Chimayo: From Portfolio "Spanish Colonial Designs of New Mexico"', 'Coca Cola', 'Untitled', 'Marion Feasting the British Officer on Sweet Potatoes'], 
+                 'correctOption': 'Untitled', 
+                 'image': 'https://api.nga.gov/iiif/0895792b-7f50-4670-a452-317ab9e0a6b9/full/!400,400/0/default.jpg', 
+                 'review': 'Untitled, a Drawing by Hans Gustav Burkhardt, was developed over a period spanning from 1980 to 1990, executed in the medium of watercolor and felt-tip pen on sketchbook paper.'}]
+    ques = questions[questionNumber]
     print(title, review, photo)
-    return render_template('practice.html')
+    return render_template('practicequestion.html', question = ques, quesNum = questionNumber)
 
 
 @app.route('/quiz', methods=['GET', 'POST'])
@@ -113,7 +126,7 @@ def quizPage():
         rating = request.form.get('difficulty')
         print(review_text, rating)
     try:
-        diff = request.form.get('difficulty')
+        diff = request.form.get('questiondifficulty')
         print(diff)
     except:
         print()

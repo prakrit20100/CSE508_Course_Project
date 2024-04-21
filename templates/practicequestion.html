@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }} "> <!-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h2>ART HISTORY QUIZ</h2>
+    </div>
+
+    <div class="container">
+        <div class="question">
+            <h1>{{ question['question'] }}</h1>
+            <form id="options" method="POST" action="/review">
+                <div class="radiobtn">
+                    <input type="radio" id="{{ question['options'][0] }}" name='answer'
+                        value="{{ question['options'][0] }}"  required/>
+                    <label for="{{ question['options'][0] }}">{{ question['options'][0] }}</label>
+                </div>
+                <div class="radiobtn">
+                    <input type="radio" id="{{ question['options'][1] }}" name='answer'
+                        value="{{ question['options'][1] }}" />
+                    <label for="{{ question['options'][1] }}">{{ question['options'][1] }}</label>
+                </div>
+                <div class="radiobtn">
+                    <input type="radio" id="{{ question['options'][2] }}" name='answer'
+                        value="{{ question['options'][2] }}" />
+                    <label for="{{ question['options'][2] }}">{{ question['options'][2] }}</label>
+                </div>
+                <div class="radiobtn">
+                    <input type="radio" id="{{ question['options'][3] }}" name='answer'
+                        value="{{ question['options'][3] }}" />
+                    <label for="{{ question['options'][3] }}">{{ question['options'][3] }}</label>
+                </div>
+            </form>
+        </div>
+        <div class="image-bg">
+            <div class="image">
+                <img src="{{ question['image'] }}" alt="Description of Image">
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="button-x" type="submit" form="options">Submit</button>
+    </div>
+
+    <div class="footer">
+        <p>Made By: Group 63</p>
+    </div>
+    <script>
+        var questionElement = document.querySelector('.question');
+
+        var questionHeight = questionElement.clientHeight;
+
+        var imgElement = document.querySelector('.image');
+
+        imgElement.height = questionHeight;
+        var imgWidth = imgElement.clientWidth;
+    </script>
+</body>
+
+
+</html>
