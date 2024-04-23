@@ -27,7 +27,7 @@ This project is aimed at [brief description of your project].
    conda create --name myenv python=3.10
 4. Activate the Conda environment:
    ```bash
-  conda activate myenv
+   conda activate myenv
 5. Install the required packages:
    ```bash
    pip install -r requirements.txt
