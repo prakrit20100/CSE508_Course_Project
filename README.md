@@ -18,10 +18,10 @@ This project is aimed at [brief description of your project].
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/prakrit20100/CSE508_Course_Project.git
 2. Navigate to the project directory:
    ```bash
-   cd your-repository
+   cd CSE508_Course_Project
 3. Create a Conda environment named myenv with Python 3.10:
    ```bash
    conda create --name myenv python=3.10
@@ -31,6 +31,6 @@ This project is aimed at [brief description of your project].
 5. Install the required packages:
    ```bash
    pip install -r requirements.txt
-7. Download the English language model for spaCy:
+6. Download the English language model for spaCy:
    ```bash
    python -m spacy download en_core_web_sm
