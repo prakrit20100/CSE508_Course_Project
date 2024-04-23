@@ -20,12 +20,17 @@ This project is aimed at [brief description of your project].
    ```bash
    git clone https://github.com/your-username/your-repository.git
 2. Navigate to the project directory:
+   ```bash
    cd your-repository
 3. Create a Conda environment named myenv with Python 3.10:
+   ```bash
    conda create --name myenv python=3.10
 4. Activate the Conda environment:
+   ```bash
   conda activate myenv
 5. Install the required packages:
-  Install the required Python packages:
-6. Download the English language model for spaCy:
+   ```bash
+   pip install -r requirements.txt
+7. Download the English language model for spaCy:
+   ```bash
    python -m spacy download en_core_web_sm
